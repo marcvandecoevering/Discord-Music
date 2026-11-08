@@ -4,7 +4,7 @@
   <Repository>ghcr.io/marcvandecoevering/discord-music:latest</Repository>
   <Network>bridge</Network><Shell>bash</Shell><Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/marcvandecoevering/Discord-Music/main/web/assets/icon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/marcvandecoevering/Discord-Music/main/web/assets/icon.png</Icon>
   <Project>https://github.com/marcvandecoevering/Discord-Music</Project>
   <Support>https://github.com/marcvandecoevering/Discord-Music/issues</Support>
   <TemplateURL>https://raw.githubusercontent.com/marcvandecoevering/unraid-templates/main/templates/discord-music.xml</TemplateURL>
