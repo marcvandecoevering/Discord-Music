@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Discord-Music</Name>
+  <Repository>ghcr.io/marcvandecoevering/discord-music:latest</Repository>
+  <Network>bridge</Network><Shell>bash</Shell><Privileged>false</Privileged>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/marcvandecoevering/Discord-Music/main/web/assets/icon.svg</Icon>
+  <Project>https://github.com/marcvandecoevering/Discord-Music</Project>
+  <Support>https://github.com/marcvandecoevering/Discord-Music/issues</Support>
+  <TemplateURL>https://raw.githubusercontent.com/marcvandecoevering/unraid-templates/main/templates/discord-music.xml</TemplateURL>
+  <Category>MediaApp:Music</Category><Beta>true</Beta>
+  <Overview>Personal Discord music player with playlists, a web interface and automatic voice channel management. Requires x86-64 and a Discord bot. Downloads SinusBot from its official image on first startup.</Overview>
+  <Config Name="Web port" Target="8080" Default="18087" Mode="tcp" Type="Port" Display="always" Required="true">18087</Config>
+  <Config Name="Music library" Target="/data" Default="/mnt/user/appdata/discord-music/data" Mode="rw" Type="Path" Display="always" Required="true">/mnt/user/appdata/discord-music/data</Config>
+  <Config Name="Web admin password" Target="SINUSBOT_PASSWORD" Type="Variable" Required="true" Display="always" Mask="true"/>
+  <Config Name="Discord bot token" Target="DISCORD_TOKEN" Type="Variable" Required="true" Display="always" Mask="true"/>
+  <Config Name="Discord server ID" Target="DISCORD_GUILD_ID" Type="Variable" Required="true" Display="always"/>
+  <Config Name="Discord voice channel ID" Target="DISCORD_CHANNEL_ID" Type="Variable" Required="true" Display="always"/>
+</Container>

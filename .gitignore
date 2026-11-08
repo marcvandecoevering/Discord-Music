@@ -1,0 +1,14 @@
+.env*
+data/
+node_modules/
+*.tar
+*.tgz
+*.sqlite*
+
+*.env
+backups/
+*.log
+*.mp3
+*.flac
+*.wav
+*.zip

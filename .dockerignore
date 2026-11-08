@@ -1,0 +1,8 @@
+*
+!Dockerfile
+!start.sh
+!bridge
+!bridge/*.js
+!bridge/package*.json
+!web
+!web/**
