@@ -63,7 +63,7 @@ hr{border-color:var(--mw-border)!important}
 .progress{background:#293332!important}.progress-bar{background:#739d87!important}
 code,pre{background:#101516!important;color:#c3d8ca!important;border-color:var(--mw-border)!important}
 .loadNotice{background:var(--mw-panel)!important;border-color:var(--mw-border)!important;color:var(--mw-muted)!important;padding:24px!important;width:250px!important}
-body>.loadNotice>.slogo{background-image:none!important;height:auto!important;width:auto!important}body>.loadNotice>.slogo:after{content:"Discord Music";font:600 21px "Segoe UI",sans-serif;color:var(--mw-text)}
+body>.loadNotice>.slogo{background-image:none!important;height:auto!important;width:auto!important}body>.loadNotice>.slogo:after{content:"Discord-Music";font:600 21px "Segoe UI",sans-serif;color:var(--mw-text)}
 *:focus-visible{outline:2px solid var(--mw-accent)!important;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media(max-width:767px){.navbar-brand{padding-left:12px!important}.mw-brand{font-size:17px}.foot-player{padding:8px 16px!important}.tracktitle{font-size:16px!important}}

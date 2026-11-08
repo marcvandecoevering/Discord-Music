@@ -1,6 +1,7 @@
 #!/bin/bash
 set -Eeuo pipefail
-: "${SINUSBOT_PASSWORD:?Set the web admin password}"
+export SINUSBOT_PASSWORD="${DISCORD_MUSIC_ADMIN_PASSWORD:-${SINUSBOT_PASSWORD:-}}"
+: "${SINUSBOT_PASSWORD:?Set the Discord-Music web admin password}"
 export SINUSBOT_URL=http://127.0.0.1:8087
 digest=eaa8b3c48608546628514a9647c5b664c98e346aa66fb085f6c6ed27e9654464
 cache=/data/.muziekwijf
