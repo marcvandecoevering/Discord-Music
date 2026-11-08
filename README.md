@@ -6,7 +6,7 @@ Eén container voor Unraid (x86-64): een muziekbibliotheek, webinterface en Disc
 
 ## Installatie
 
-Gebruik het template in `templates/discord-music.xml` met het gepubliceerde image, of bouw lokaal met `docker build -t discord-music:local .` en kies dat image in Unraid. Vul het adminwachtwoord, Discord-bottoken, server-ID en voicekanaal-ID in. De bot heeft View Channel, Connect en Speak nodig. Open de WebUI (standaard poort 18087) en log in als admin. Bewaar de datamap bij updates. Laat nooit twee spelers tegelijk dezelfde bibliotheek openen.
+Gebruik het [Unraid-template](templates/discord-music.xml). In het veld **Repository** hoort `ghcr.io/marcvandecoevering/discord-music:latest` te staan. Unraid haalt dit image rechtstreeks uit de GitHub Container Registry. Vul het adminwachtwoord, Discord-bottoken, server-ID en voicekanaal-ID in. De bot heeft View Channel, Connect en Speak nodig. Open de WebUI (standaard poort 18087) en log in als admin. Bewaar de datamap bij updates. Laat nooit twee spelers tegelijk dezelfde bibliotheek openen.
 
 Bij de eerste start downloadt Discord-Music de spelerlaag uit het officiële Docker Hub-image sinusbot/docker:1.0.2-discord en controleert de SHA-256. De cache in /data/.muziekwijf maakt offline herstarts mogelijk. SinusBot zelf zit niet in deze repository of het gepubliceerde image. SinusBot heeft een eigen licentie voor persoonlijk gebruik. Lokale muziekuploads en playlists worden ondersteund; TTS en een YouTube-downloader zijn niet inbegrepen.
 
