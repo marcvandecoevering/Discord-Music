@@ -1,4 +1,6 @@
 FROM node:24-bookworm-slim
+LABEL org.opencontainers.image.source="https://github.com/marcvandecoevering/Discord-Music" \
+      org.opencontainers.image.title="Discord-Music"
 RUN apt-get update && apt-get install -y --no-install-recommends nginx curl ca-certificates tini util-linux && rm -rf /var/lib/apt/lists/* /etc/nginx/sites-enabled/default
 WORKDIR /app
 COPY bridge/package*.json ./
