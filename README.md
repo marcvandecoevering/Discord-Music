@@ -1,5 +1,7 @@
 # Discord-Music
 
+Discord-Music is een fork van [het officiële SinusBot Docker-project](https://github.com/SinusBot/docker).
+
 Eén container voor Unraid (x86-64): een muziekbibliotheek, webinterface en Discord-verbinding. In een leeg kanaal stopt de muziek. De bot komt terug wanneer iemand muziek start en er een luisteraar aanwezig is.
 
 ## Installatie
