@@ -4,10 +4,11 @@ const can=p=>auth?.permissions.includes(p);
 const time=ms=>{const n=Math.max(0,Math.floor((ms||0)/1000));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0');};
 function notice(s,error=false){$('#notice').textContent=s;$('#notice').classList.toggle('error',error);$('#notice').hidden=false;clearTimeout(notice.timer);notice.timer=setTimeout(()=>$('#notice').hidden=true,7000);}
 async function api(route,data,method){
+  const sessionAtRequest=auth;
   const options={method:method||(data===undefined?'GET':'POST'),headers:{'Content-Type':'application/json','X-CSRF-Token':auth?.csrf||''}};
   if(data!==undefined)options.body=JSON.stringify(data);
   const res=await fetch('/api/'+route,options),body=await res.json();
-  if(res.status===401){auth=null;showLogin();}
+  if(res.status===401&&auth===sessionAtRequest){auth=null;showLogin();}
   if(!res.ok)throw Error(body.error||'Verzoek mislukt');return body;
 }
 const action=fn=>(...args)=>{try{return Promise.resolve(fn(...args)).catch(e=>notice(e.message,true));}catch(e){notice(e.message,true);}};
@@ -93,4 +94,4 @@ async function loadUsers(){
     box.append(button('Wachtwoord instellen',async()=>{const password=prompt('Nieuw wachtwoord voor '+u.name);if(password){await api('users/'+u.id,{password},'PATCH');notice('Wachtwoord bijgewerkt');}}));return box;
   }));
 }
-setInterval(()=>poll().catch(()=>{}),1200);load().catch(()=>showLogin());
+setInterval(()=>poll().catch(()=>{}),1200);load().catch(()=>{if(!auth)showLogin();});
