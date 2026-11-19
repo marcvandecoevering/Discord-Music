@@ -1,8 +1,11 @@
 *
 !Dockerfile
 !start.sh
-!bridge
-!bridge/*.js
-!bridge/package*.json
-!web
-!web/**
+!package.json
+!package-lock.json
+!app
+!app/**
+!public
+!public/**
+!LICENSE
+!THIRD_PARTY_NOTICES.md

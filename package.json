@@ -1,11 +1,11 @@
 {
-  "name": "discord-music-bridge",
-  "version": "0.1.0",
+  "name": "discord-music",
+  "version": "2.0.0-beta.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "test": "node --test"
+    "start": "node app/server.js",
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
     "@discordjs/voice": "0.19.2",
