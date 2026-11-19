@@ -2,7 +2,7 @@
 # Run on Unraid. No music files or legacy databases are deleted or rewritten.
 set -Eeuo pipefail
 name="${CONTAINER_NAME:-Discord-Music}"
-image="${IMAGE:-ghcr.io/marcvandecoevering/discord-music:independent}"
+image="${IMAGE:-ghcr.io/marcvandecoevering/discord-music:latest}"
 base="${APPDATA:-/mnt/user/appdata/muziekwijf}"
 cd "$base"
 docker inspect "$name" >/dev/null

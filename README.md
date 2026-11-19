@@ -4,9 +4,9 @@ Een onafhankelijke Discord-muziekapp voor Unraid, met een eigen webinterface, da
 
 Dit project begon als fork van het [SinusBot Docker-project](https://github.com/SinusBot/docker). Versie 2 vervangt de onderliggende speler en interface volledig door eigen broncode. De legacy-importeur kan bestaande gegevens lezen, maar voert geen oude code uit.
 
-## Versie 2: migratiepreview
+## Versie 2
 
-De branch codex/independent-player publiceert het image **ghcr.io/marcvandecoevering/discord-music:independent**. De bestaande latest-versie wordt pas vervangen na de migratiecontrole op Unraid. Gebruik de preview niet gelijktijdig met een andere speler die dezelfde muziekmap gebruikt.
+Het publieke image is **ghcr.io/marcvandecoevering/discord-music:latest**. De migratie, bibliotheek en hoorbare Discord-audio zijn op Unraid bevestigd. Gebruik nooit twee spelers tegelijk op dezelfde muziekmap.
 
 ## Functies
 
@@ -20,7 +20,7 @@ De branch codex/independent-player publiceert het image **ghcr.io/marcvandecoeve
 
 ## Unraid
 
-Gebruik templates/discord-music.xml. Voor de migratiepreview is de Repository ghcr.io/marcvandecoevering/discord-music:independent. Poort 8080 in de container is standaard hostpoort 18087. Koppel je bestaande muziekdatamap aan /data.
+Gebruik templates/discord-music.xml. De Repository is ghcr.io/marcvandecoevering/discord-music:latest. Poort 8080 in de container is standaard hostpoort 18087. Koppel je bestaande muziekdatamap aan /data.
 
 Vul DISCORD_MUSIC_ADMIN_PASSWORD, DISCORD_TOKEN, DISCORD_GUILD_ID en DISCORD_CHANNEL_ID in. Het adminwachtwoord wordt bij eerste initialisatie ingesteld; latere wijzigingen gebeuren in de app. De bot heeft View Channel, Connect en Speak nodig. De container draait de applicatie als UID/GID 1000 en maakt alleen /data/discord-music aan. Bestaande bestanden moeten leesbaar zijn voor deze gebruiker.
 
