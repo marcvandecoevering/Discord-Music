@@ -24,7 +24,7 @@ Gebruik templates/discord-music.xml. De Repository is ghcr.io/marcvandecoevering
 
 Vul DISCORD_MUSIC_ADMIN_PASSWORD, DISCORD_TOKEN, DISCORD_GUILD_ID en DISCORD_CHANNEL_ID in. Het adminwachtwoord wordt bij eerste initialisatie ingesteld; latere wijzigingen gebeuren in de app. De bot heeft View Channel, Connect en Speak nodig. De container draait de applicatie als UID/GID 1000 en maakt alleen /data/discord-music aan. Bestaande bestanden moeten leesbaar zijn voor deze gebruiker.
 
-Bij meerdere oude instances is DISCORD_MUSIC_INSTANCE_ID verplicht. Alle instances en hun instellingen worden bewaard; deze container beheert één actieve Discord-verbinding. Bestaande omgevingsvariabelen uit eerdere versies blijven als migratiecompatibiliteit ondersteund. Gebruik bij nieuwe installaties de hierboven genoemde instellingen.
+Bij meerdere oude instances is DISCORD_MUSIC_INSTANCE_ID verplicht. Alle instances en hun instellingen worden bewaard; deze container beheert één actieve Discord-verbinding.
 
 ## Bestaande bibliotheek behouden
 

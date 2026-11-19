@@ -10,7 +10,7 @@ import { Player } from './player.js';
 import { Voice,DisabledVoice } from './voice.js';
 
 const root=process.env.DATA_DIR||'/data';
-const store=new Store(root,{adminPassword:process.env.DISCORD_MUSIC_ADMIN_PASSWORD||process.env.SINUSBOT_PASSWORD,instanceId:process.env.DISCORD_MUSIC_INSTANCE_ID||process.env.SINUSBOT_INSTANCE_ID||undefined});
+const store=new Store(root,{adminPassword:process.env.DISCORD_MUSIC_ADMIN_PASSWORD,instanceId:process.env.DISCORD_MUSIC_INSTANCE_ID||undefined});
 const voice=process.env.DISCORD_DISABLED==='1'?new DisabledVoice():new Voice();
 const player=new Player(store,voice);
 player.on('errorState',()=>console.error('Playback stopped; see authenticated player status.'));
