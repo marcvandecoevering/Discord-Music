@@ -26,7 +26,7 @@ jobs:
           docker exec qa node /app/test/integration.mjs
           docker exec qa node /app/test/audio.mjs
           docker exec qa node /app/test/transport.mjs
-          docker exec qa sh -c 'test ! -e /opt/player/sinusbot && test ! -e /opt/sinusbot && test ! -e /app/bridge'
+          docker exec qa sh -c 'test -f /app/app/server.js && test -f /app/public/app.js && command -v ffmpeg && test ! -e /opt/player && test ! -e /app/bridge'
       - if: github.event_name != 'pull_request'
         uses: docker/login-action@v3
         with:

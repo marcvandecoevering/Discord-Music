@@ -2,7 +2,7 @@
 
 Een onafhankelijke Discord-muziekapp voor Unraid, met een eigen webinterface, database en FFmpeg-speler. Eén container, één datamap en één webpoort. De container bevat alles voor het afspelen van lokale muziek; bij de eerste start is geen download van een andere muziekapp nodig. Alleen de Discord-verbinding vereist internet.
 
-Dit project begon als fork van het [SinusBot Docker-project](https://github.com/SinusBot/docker). Versie 2 vervangt de onderliggende speler en interface volledig door eigen broncode. De legacy-importeur kan bestaande gegevens lezen, maar voert geen oude code uit.
+Versie 2 bevat een eigen speler en interface. De importeur kan bestaande bibliotheken overzetten zonder code van de oude applicatie uit te voeren.
 
 ## Versie 2
 
@@ -24,7 +24,7 @@ Gebruik templates/discord-music.xml. De Repository is ghcr.io/marcvandecoevering
 
 Vul DISCORD_MUSIC_ADMIN_PASSWORD, DISCORD_TOKEN, DISCORD_GUILD_ID en DISCORD_CHANNEL_ID in. Het adminwachtwoord wordt bij eerste initialisatie ingesteld; latere wijzigingen gebeuren in de app. De bot heeft View Channel, Connect en Speak nodig. De container draait de applicatie als UID/GID 1000 en maakt alleen /data/discord-music aan. Bestaande bestanden moeten leesbaar zijn voor deze gebruiker.
 
-Bij meerdere oude instances is DISCORD_MUSIC_INSTANCE_ID verplicht. Alle instances en hun instellingen worden bewaard; deze container beheert één actieve Discord-verbinding. Oude SINUSBOT_PASSWORD en SINUSBOT_INSTANCE_ID omgevingsvariabelen worden uitsluitend als migratiecompatibiliteit ondersteund.
+Bij meerdere oude instances is DISCORD_MUSIC_INSTANCE_ID verplicht. Alle instances en hun instellingen worden bewaard; deze container beheert één actieve Discord-verbinding. Bestaande omgevingsvariabelen uit eerdere versies blijven als migratiecompatibiliteit ondersteund. Gebruik bij nieuwe installaties de hierboven genoemde instellingen.
 
 ## Bestaande bibliotheek behouden
 
